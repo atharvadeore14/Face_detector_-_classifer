@@ -16,24 +16,10 @@ from utils.datasets import split_data
 from utils.preprocessor import preprocess_input
 
 # parameters
-batch_size = 32
-num_epochs = 10000
-input_shape = (64, 64, 1)
-validation_split = .2
-verbose = 1
-num_classes = 7
-patience = 50
-base_path = '../trained_models/emotion_models/'
+
 
 # data generator
-data_generator = ImageDataGenerator(
-                        featurewise_center=False,
-                        featurewise_std_normalization=False,
-                        rotation_range=10,
-                        width_shift_range=0.1,
-                        height_shift_range=0.1,
-                        zoom_range=.1,
-                        horizontal_flip=True)
+
 
 # model parameters/compilation
 model = mini_XCEPTION(input_shape, num_classes)
